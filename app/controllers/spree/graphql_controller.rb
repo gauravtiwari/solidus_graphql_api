@@ -2,8 +2,6 @@
 
 module Spree
   class GraphqlController < ActionController::API
-    skip_before_action :verify_authenticity_token
-
     def execute
       render json: SolidusGraphqlApi::Schema.execute(
         params[:query],
