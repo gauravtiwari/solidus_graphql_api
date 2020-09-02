@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module Spree
-  class GraphqlController < ApplicationController
+  class GraphqlController < ActionController::API
     skip_before_action :verify_authenticity_token
 
     def execute
