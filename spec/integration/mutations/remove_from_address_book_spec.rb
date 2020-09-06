@@ -28,7 +28,7 @@ RSpec.describe_mutation :remove_from_address_book, mutation: :remove_from_addres
       let(:user_addresses) { subject[:data][:removeFromAddressBook][:user][:addresses][:nodes] }
 
       it { expect(user_addresses.count).to eq 2 }
-      it { expect(user_addresses.map{ |address| address[:id] }).to_not include(address.id) }
+      it { expect(user_addresses.pluck(:id)).to_not include(address.id) }
 
       describe 'default address' do
         let(:default_address) { subject[:data][:removeFromAddressBook][:user][:defaultAddress] }

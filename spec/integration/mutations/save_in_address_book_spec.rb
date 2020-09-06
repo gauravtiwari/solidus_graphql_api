@@ -63,7 +63,7 @@ RSpec.describe_mutation :save_in_address_book, mutation: :save_in_address_book d
       context "and given attributes are correct" do
         it { expect(default_address).to_not be_nil }
         it { expect(user_addresses.count).to eq 3 }
-        it { expect(user_addresses.map{ |address| address[:firstname] }).to include(address[:firstname]) }
+        it { expect(user_addresses.pluck(:firstname)).to include(address[:firstname]) }
         it { expect(user_errors).to be_empty }
 
         context 'when default false' do

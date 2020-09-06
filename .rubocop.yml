@@ -1,10 +1,13 @@
 require:
   - solidus_dev_support/rubocop
 
+AllCops:
+  NewCops: enable
+
 Style/ExpandPathArguments:
   Enabled: false
 
-Metrics/LineLength:
+Layout/LineLength:
   Enabled: false
 
 Performance/RegexpMatch:
@@ -52,11 +55,17 @@ RSpec/LetSetup:
 RSpec/HookArgument:
   Enabled: false
 
-Layout/AlignArguments:
+Layout/ArgumentAlignment:
   Enabled: false
 
 Rails/RakeEnvironment:
   Enabled: false
 
 Rails/HttpStatus:
+  Enabled: false
+
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+Lint/NonDeterministicRequireOrder:
   Enabled: false

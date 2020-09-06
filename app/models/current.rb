@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 class Current < ActiveSupport::CurrentAttributes
   attribute :store, :user, :order, :order_token, :ability, :pricing_opts

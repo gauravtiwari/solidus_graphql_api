@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 module Authentication
   extend ActiveSupport::Concern
 
   AUTHORIZATION_HEADER = 'Authorization'
-  TOKEN_PATTERN = /^Bearer (?<token>.*)/
+  TOKEN_PATTERN = /^Bearer (?<token>.*)/.freeze
 
   included do
     before_action :authenticate

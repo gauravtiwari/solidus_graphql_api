@@ -11,10 +11,16 @@ gem 'solidus', github: 'solidusio/solidus', branch: branch
 # See https://github.com/bundler/bundler/issues/6677
 gem 'rails', '>0.a'
 
+# Auth
 gem 'bcrypt'
+gem 'jwt'
+
+# Encryption
 gem 'blind_index'
 gem 'lockbox'
-gem 'jwt'
+
+# Soft delete
+gem 'discard'
 
 case ENV['DB']
 when 'mysql'

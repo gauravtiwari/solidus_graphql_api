@@ -1,6 +1,8 @@
+# frozen_string_literal: true
 
 class User < ApplicationRecord
   include Spree::UserMethods
+  include Discard::Model
 
   has_secure_password
   encrypts :email, :mobile
