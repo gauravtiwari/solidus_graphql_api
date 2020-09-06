@@ -19,8 +19,9 @@ query {
         }
         createdAt
         firstname
-        id
         lastname
+        id
+
         phone
         state {
           name
@@ -51,8 +52,9 @@ query {
       }
       createdAt
       firstname
-      id
       lastname
+      id
+
       phone
       state {
         name
@@ -65,7 +67,7 @@ query {
       zipcode
     }
     createdAt
-    currentSignInAt
+    currentLoginAt
     defaultAddress {
       address1
       address2
@@ -84,8 +86,9 @@ query {
       }
       createdAt
       firstname
-      id
       lastname
+      id
+
       phone
       state {
         name
@@ -99,9 +102,8 @@ query {
     }
     email
     id
-    lastSignInAt
-    login
-    shipAddress{
+    lastLoginAt
+    shipAddress {
       address1
       address2
       alternativePhone
@@ -119,8 +121,9 @@ query {
       }
       createdAt
       firstname
-      id
       lastname
+      id
+
       phone
       state {
         name
@@ -132,8 +135,7 @@ query {
       updatedAt
       zipcode
     }
-    signInCount
-    spreeApiKey
+    loginCount
     updatedAt
     wallet {
       nodes {
@@ -160,8 +162,9 @@ query {
               }
               createdAt
               firstname
-              id
               lastname
+              id
+
               phone
               state {
                 name

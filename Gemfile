@@ -11,8 +11,10 @@ gem 'solidus', github: 'solidusio/solidus', branch: branch
 # See https://github.com/bundler/bundler/issues/6677
 gem 'rails', '>0.a'
 
-# Provides basic authentication functionality for testing parts of your engine
-gem 'solidus_auth_devise'
+gem 'bcrypt'
+gem 'blind_index'
+gem 'lockbox'
+gem 'jwt'
 
 case ENV['DB']
 when 'mysql'

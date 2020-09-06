@@ -1,4 +1,4 @@
-mutation ($input: SaveInAddressBookInput!) {
+mutation($input: SaveInAddressBookInput!) {
   saveInAddressBook(input: $input) {
     user {
       email

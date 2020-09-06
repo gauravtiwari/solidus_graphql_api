@@ -1,3 +1,4 @@
+
 class Current < ActiveSupport::CurrentAttributes
   attribute :store, :user, :order, :order_token, :ability, :pricing_opts
   attribute :request_id, :user_agent, :ip_address

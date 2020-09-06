@@ -7,7 +7,6 @@ RSpec.describe_query :current_user, query: :current_user, freeze_date: true do
     create(:user,
            id: 1,
            email: 'email@example.com',
-           spree_api_key: '123',
            ship_address: ship_address,
            bill_address: bill_address)
   }

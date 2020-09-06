@@ -29,8 +29,16 @@ Gem::Specification.new do |spec|
   spec.executables = files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
+  # Graphql
   spec.add_dependency 'batch-loader', '>= 1.4.1', '< 1.6.0'
   spec.add_dependency 'graphql', '>= 1.10', '< 1.12'
+
+  # Encryption
+  spec.add_dependency 'blind_index'
+  spec.add_dependency 'lockbox'
+
+  spec.add_dependency 'jwt'
+
   spec.add_dependency 'solidus_core', ['>= 2.5', '< 3']
   spec.add_dependency 'solidus_support', '~> 0.5'
 

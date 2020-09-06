@@ -585,8 +585,12 @@ type MarkDefaultAddressPayload {
 }
 
 type Mutation {
-  addAddressesToCheckout(input: AddAddressesToCheckoutInput!): AddAddressesToCheckoutPayload
-  addPaymentToCheckout(input: AddPaymentToCheckoutInput!): AddPaymentToCheckoutPayload
+  addAddressesToCheckout(
+    input: AddAddressesToCheckoutInput!
+  ): AddAddressesToCheckoutPayload
+  addPaymentToCheckout(
+    input: AddPaymentToCheckoutInput!
+  ): AddPaymentToCheckoutPayload
   addToCart(input: AddToCartInput!): AddToCartPayload
   advanceCheckout(input: AdvanceCheckoutInput!): AdvanceCheckoutPayload
   applyCouponCode(input: ApplyCouponCodeInput!): ApplyCouponCodePayload
@@ -595,7 +599,9 @@ type Mutation {
   emptyCart(input: EmptyCartInput!): EmptyCartPayload
   markDefaultAddress(input: MarkDefaultAddressInput!): MarkDefaultAddressPayload
   nextCheckoutState(input: NextCheckoutStateInput!): NextCheckoutStatePayload
-  removeFromAddressBook(input: RemoveFromAddressBookInput!): RemoveFromAddressBookPayload
+  removeFromAddressBook(
+    input: RemoveFromAddressBookInput!
+  ): RemoveFromAddressBookPayload
   removeFromCart(input: RemoveFromCartInput!): RemoveFromCartPayload
   saveInAddressBook(input: SaveInAddressBookInput!): SaveInAddressBookPayload
   selectShippingRate(input: SelectShippingRateInput!): SelectShippingRatePayload
@@ -1860,15 +1866,13 @@ type User implements Node {
   ): AddressConnection!
   billAddress: Address
   createdAt: ISO8601DateTime
-  currentSignInAt: ISO8601DateTime
+  currentLoginAt: ISO8601DateTime
   defaultAddress: Address
   email: String!
   id: ID!
-  lastSignInAt: ISO8601DateTime
-  login: String
+  lastLoginAt: ISO8601DateTime
+  loginCount: Int!
   shipAddress: Address
-  signInCount: Int!
-  spreeApiKey: String
   updatedAt: ISO8601DateTime
   wallet(
     """

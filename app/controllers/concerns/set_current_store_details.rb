@@ -18,9 +18,9 @@ module SetCurrentStoreDetails
 
   def current_order_by_guest_token
     incomplete_orders = Spree::Order.incomplete
-    incomplete_orders = incomplete_orders.where(store: current_store) if Current.store
+    incomplete_orders = incomplete_orders.where(store: Current.store) if Current.store
 
-    incomplete_orders.find_by(guest_token: order_token)
+    incomplete_orders.find_by(guest_token: Current.order_token)
   end
 
   def current_pricing_options

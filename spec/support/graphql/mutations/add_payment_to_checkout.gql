@@ -1,10 +1,10 @@
-mutation ($input: AddPaymentToCheckoutInput!) {
+mutation($input: AddPaymentToCheckoutInput!) {
   addPaymentToCheckout(input: $input) {
     order {
       email
       number
       state
-    },
+    }
     errors {
       path
       message

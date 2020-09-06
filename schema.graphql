@@ -1860,15 +1860,13 @@ type User implements Node {
   ): AddressConnection!
   billAddress: Address
   createdAt: ISO8601DateTime
-  currentSignInAt: ISO8601DateTime
+  currentLoginAt: ISO8601DateTime
   defaultAddress: Address
   email: String!
   id: ID!
-  lastSignInAt: ISO8601DateTime
-  login: String
+  lastLoginAt: ISO8601DateTime
+  loginCount: Int!
   shipAddress: Address
-  signInCount: Int!
-  spreeApiKey: String
   updatedAt: ISO8601DateTime
   wallet(
     """
