@@ -6,6 +6,9 @@ require 'solidus_graphql_api'
 module SolidusGraphqlApi
   class Engine < Rails::Engine
     include SolidusSupport::EngineExtensions
+
+    isolate_namespace ::Spree
+
     engine_name 'solidus_graphql_api'
 
     # use rspec for tests
